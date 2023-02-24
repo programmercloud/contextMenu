@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Menu</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Material Icon -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--  container element to group content together -->
+    <div class="container">
+      <!-- container for a menu -->
+      <div class="menu">
+        <!-- unordered list element to contain menu items -->
+        <ul class="menu-list">
+          <!-- list item elements containing single menu item -->
+          <li class="menu-item">
+            <!--  button element styled as a menu item -->
+            <button class="menu-button">
+              <!-- icon element using the Feather icon library -->
+              <i data-feather="corner-up-right"></i>Share
+            </button>
+          </li>
+          <li class="menu-item">
+            <button class="menu-button">
+              <i data-feather="edit-2"></i>Rename
+            </button>
+          </li>
+        </ul>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <button class="menu-button menu-button--black">
+              <i data-feather="circle"></i>No status<i
+                data-feather="chevron-right"
+              ></i>
+            </button>
+
+            <!-- unordered list element to contain submenu items -->
+            <ul class="menu-sub-list">
+              <li class="menu-item">
+                <button class="menu-button menu-button--orange">
+                  <i data-feather="square"></i>Needs review
+                </button>
+              </li>
+              <li class="menu-item">
+                <button class="menu-button menu-button--purple">
+                  <i data-feather="octagon"></i>In progress
+                </button>
+              </li>
+              <li class="menu-item">
+                <button class="menu-button menu-button--green">
+                  <i data-feather="triangle"></i>Approved
+                </button>
+              </li>
+              <li class="menu-item">
+                <button
+                  class="menu-button menu-button--black menu-button--checked"
+                >
+                  <i data-feather="circle"></i>No status<i
+                    data-feather="check"
+                  ></i>
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <button class="menu-button">
+              <i data-feather="link"></i>Copy Link Address
+            </button>
+          </li>
+          <li class="menu-item">
+            <button class="menu-button">
+              <i data-feather="folder-plus"></i>Move to
+            </button>
+          </li>
+          <li class="menu-item">
+            <button class="menu-button">
+              <i data-feather="copy"></i>Copy to
+            </button>
+          </li>
+          <li class="menu-item">
+            <button class="menu-button">
+              <i data-feather="lock"></i>Make Private
+            </button>
+          </li>
+          <li class="menu-item">
+            <button class="menu-button">
+              <i data-feather="download"></i>Download
+            </button>
+          </li>
+        </ul>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <button class="menu-button menu-button--delete">
+              <i data-feather="trash-2"></i>Delete
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Feather Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

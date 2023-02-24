@@ -1,0 +1,174 @@
+/* Set box-sizing property to border-box for all elements */
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* Define custom CSS variables for colors */
+:root {
+  /* Set background color variables */
+  --color-bg-primary: #cab8fb;
+  --color-bg-primary-offset: #f1f3f7;
+  --color-bg-secondary: #fff;
+
+  /* Set text color variables */
+  --color-text-primary: #3a3c42;
+  --color-text-primary-offset: #898c94;
+
+  /* Set color variables for specific elements */
+  --color-orange: #dc9960;
+  --color-green: #1eb8b1;
+  --color-purple: #657cc4;
+  --color-black: var(--color-text-primary);
+  --color-red: #d92027;
+}
+
+/* Style the body element */
+body {
+  /* Set font family and background color */
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Set the position and size of the container, 
+and center its contents horizontally and vertically */
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the menu container */
+.menu {
+  /* Set display type and background color */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-secondary);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(64, 64, 64, 0.15);
+}
+
+/* Style the list within the menu container */
+.menu-list {
+  /* Set margin, display, width, and padding properties */
+  margin: 0;
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+
+/* Style subsequent list items with a border-top property */
+.menu-list + .menu-list {
+  border-top: 1px solid #ddd;
+}
+
+/* Style the sub-menu container */
+.menu-sub-list {
+  /* Set display, padding, background color, border-radius,
+   box-shadow, position, z-index, width, and top properties */
+  display: none;
+  padding: 8px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(64, 64, 64, 0.15);
+  position: absolute;
+  left: 100%;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  flex-direction: column;
+}
+
+/* Show sub-menu container when hovering over its parent menu item */
+.menu-sub-list:hover {
+  display: flex;
+}
+
+/* Style the menu item */
+.menu-item {
+  /* Set position and list-style properties */
+  position: relative;
+  list-style: none;
+}
+
+/* Style the menu button */
+.menu-button {
+  /* Set font, border, padding, width, border-radius, text-align, 
+  display, align-items, position, and background-color properties */
+  font: inherit;
+  border: 0;
+  padding: 8px 8px;
+  padding-right: 36px;
+  width: 100%;
+  border-radius: 8px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--color-bg-secondary);
+}
+
+/* Change background color of menu button when hovering over it */
+.menu-button:hover {
+  background-color: var(--color-bg-primary-offset);
+}
+
+/* Show the sub-menu container when hovering over its parent menu button */
+.menu-button:hover + .menu-sub-list {
+  display: flex;
+}
+
+/* When the menu button is hovered, change the stroke color of the svg */
+.menu-button:hover svg {
+  stroke: var(--color-text-primary);
+}
+
+/* Set default styling for the menu button svg, including width, height, and stroke color */
+.menu-button svg {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  stroke: var(--color-text-primary-offset);
+}
+
+/* Position the second svg in the menu button to the right and remove its margin */
+.menu-button svg:nth-of-type(2) {
+  margin-right: 0;
+  position: absolute;
+  right: 8px;
+}
+
+.menu-button--delete:hover {
+  color: var(--color-red);
+}
+
+.menu-button--delete:hover svg:first-of-type {
+  stroke: var(--color-red);
+}
+
+.menu-button--orange svg:first-of-type {
+  stroke: var(--color-orange);
+}
+.menu-button--green svg:first-of-type {
+  stroke: var(--color-green);
+}
+.menu-button--purple svg:first-of-type {
+  stroke: var(--color-purple);
+}
+.menu-button--black svg:first-of-type {
+  stroke: var(--color-black);
+}
+.menu-button--checked svg:nth-of-type(2) {
+  stroke: var(--color-purple);
+}
